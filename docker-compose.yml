@@ -5,7 +5,9 @@ services:
       args:
         DEV: "true"
     container_name: task_manager_web
-    command: python manage.py runserver 0.0.0.0:8000
+    command: >
+        sh -c "python manage.py wait_for_db &&
+         python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./app:/app
     ports:

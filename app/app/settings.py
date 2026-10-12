@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'core',
 
     'rest_framework',
-    'drf_spectacular ' ,
+    'rest_framework.authtoken',
+    'drf_spectacular' ,
+    'user',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
